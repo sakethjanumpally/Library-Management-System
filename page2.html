@@ -1,0 +1,133 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {border-radius: 50%;}
+.button2 {border-radius: 50%;}
+
+</style>
+</head>
+<body>
+    <h2>Books of the Library</h2>
+    <p>Search below</p>  
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+
+
+<table>
+  <tr>
+    <th>BookID</th>
+    <th>BookName</th>
+    <th>AuthorName</th>
+    <th>Year Of Publlish</th>
+  </tr>
+  <tbody id="myTable">
+
+  <tr>
+    <td>11</td>
+    <td>Science Nature</td>
+    <td>Williams</td>
+    <td>2000</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>Harry Potter</td>
+    <td>vamshi</td>
+    <td>1990</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>Amar Chitra</td>
+    <td>Jean De</td>
+    <td>2000</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>Brittania Discovery</td>
+    <td>Ruskin</td>
+    <td>1994</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>The Complete Harry Potter Collection</td>
+    <td>Rowling</td>
+    <td>1995</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>The Animal Family</td>
+    <td>Randall Jarrell</td>
+    <td>1985</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>Chronicles of Narnia</td>
+    <td>Lewis</td>
+    <td>1985</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>How Do Dinosaurs Go?</td>
+    <td>Jane Yolen</td>
+    <td>1975</td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>Mary Poppins</td>
+    <td>Pamela L</td>
+    <td>1985</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>Little Bunny Follows His Nose</td>
+    <td>Katherine</td>
+    <td>1973</td>
+  </tr>
+</tbody>
+</table>
+<button class="button button1" onclick="document.location='file:///C:/Users/DELL/Desktop/New%20folder/demo.html'">1</button>
+<button class="button button2" onclick="document.location='file:///C:/Users/DELL/Desktop/New%20folder/page2.html'">2</button>
+<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+</body>
+</html>
+
